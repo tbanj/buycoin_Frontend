@@ -16,7 +16,71 @@
     <!-- <form>
         <div style="color: white; font-size: 14px;">gdghdhd</div>
     </form> -->
+
+    <!-- mobile navbar view content -->
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <!-- search input -->
+            <form class="formS relCss posRel">
+                <span id="searchIcon"> <img id="slashIcon"
+                    width="10" height="25" src="../assets/search-key-slash.svg" alt="" class="mr-2 header-search-key-slash"/></span>
+                <input class="" type="text" placeholder="Search or jump to…">
+        </form>
+            <div role="none" class="drop-divider"></div>
+          <a href="#">Dashboard</a>
+          <div role="none" class="drop-divider"></div>
+          <a href="#">Pull request</a>
+          <div role="none" class="drop-divider"></div>
+          <a href="#">Issues</a>
+          <div role="none" class="drop-divider"></div>
+          <a href="#">Marketplace</a>
+          
+          <div role="none" class="drop-divider"></div>
+          <a href="#">Explore</a>
+          <div role="none" class="drop-divider"></div>
+          <!-- <a href="#">image tbanj </a> -->
+          <img class=" profiledb" width="20" height="20" src="../assets/images/6.jpg" alt="bell icon">
+          <div role="none" class="drop-divider"></div>
+          <a href="#">Sign out</a>
+          <!-- Search or jump to
+
+Hr
+Dashboard
+hr
+Pull request
+Hr
+Issues
+Hr
+Marketplace
+Hr
+Explore
+Ht
+Image thanji
+Hr
+Sign out -->
+        </div>
+      </div>
     <nav>
+        <!-- mobile navbar view -->
+        <div class="mobileBrand " >
+           <div class="parentFlex">
+            <div id="iconMenuMobile">
+                <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+            </div>
+
+            <div class="fz65">
+                <img src="../assets/github_3.png" alt="mobile-logo" width="30" height="30">
+            </div>
+            <div style="flex: 1;" class="fz65">
+                <div class="fr">
+                    <img src="../assets/images/notification.svg" alt="mobile-logo" width="30" height="30">
+                </div>
+            </div>
+           </div>
+    </div>
+
+        <!-- large screen navbar view -->
         <div class="brand parentFlex">
             
          <img class="responsiveImg" src="../assets/github_3.png" alt="navbar-img"/>
@@ -26,8 +90,6 @@
                 <span id="searchIcon"> <img id="slashIcon"
                     width="10" height="25" src="../assets/search-key-slash.svg" alt="" class="mr-2 header-search-key-slash"/></span>
                 <input class="" type="text" placeholder="Search or jump to…">
-           
-            
         </form>
             <a href="#pull-request">Pull Request</a>
             <a href="#issues">Issues</a>
@@ -116,9 +178,16 @@
 
     <!-- getData(data); for github detail -->
     
-    <script>
-        
-        </script>
+    
+<script>
+    function openNav() {
+      document.getElementById("myNav").style.height = "100%";
+    }
+    
+    function closeNav() {
+      document.getElementById("myNav").style.height = "0%";
+    }
+    </script>
     <script src="../assets/js/data.js"></script>
     <script src="../assets/js/testArr.js"></script>
     <script src="../assets/js/dropdown.js"></script>
