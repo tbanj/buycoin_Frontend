@@ -1,0 +1,1 @@
+#data.viewer.login.repositories.edges[0].node.description

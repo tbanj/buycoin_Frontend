@@ -1,0 +1,262 @@
+* {
+    font-family: 'Arima Madurai', sans-serif;
+  }
+  
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    display: inline-flex;
+    background:#24292e;
+    color: white;
+    box-shadow: 1px 3px 4px #E6E6E6;
+    align-items: center;
+  }
+  
+  .navigation {
+    display: inline-flex;
+    align-items: center;
+    margin: 0 25px;
+  }
+  
+  .brand {
+    flex: 1;
+    margin: 0 25px;
+  }
+  
+  .menu {
+    display: flex;
+    list-style:none;
+    margin-right: 25px;
+  }
+  
+  .menu li a {
+    color: inherit;
+    text-decoration: none;
+    margin: 0 15px;
+  }
+  
+  .menu li a:hover {
+    text-decoration: underline;
+  }
+  
+  .search {
+    position: relative;
+    padding-bottom: 15px;
+    bottom: -7px;
+  }
+  
+  .search-input::placeholder {
+    color: white;
+    opacity: 0.8;
+  }
+  
+  .search-input {
+    height: 0px;
+    border:none;
+    position: absolute;
+    left: -200px;
+    visibility: hidden;
+    opacity: 0;
+    top: 40px;
+    background: #5747e1;
+    color: white;
+    padding: 6px;
+    font-size: 12px;
+    outline: none;
+    width: 220px;
+    transition: 80ms all ease-in;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: none;
+  }
+  
+  .search-button {
+    background:transparent;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    padding-top: 4px;
+  }
+  
+  .search-button:hover + .search-input, .search-input:hover, .search:hover .search-input {
+    visibility: visible !important;
+    opacity: 1 !important;
+    z-index: 9 !important;
+    box-shadow: 1px 3px 4px #E6E6E6;
+    height: 25px !important;
+  }
+
+
+  .responsiveImg {
+    width: 100%;
+    max-width: 30px;
+    height: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .brand a{
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 14px;
+  }
+
+  .brand img{
+    float: left;
+    display: block;
+    color: white;
+    text-decoration: none;
+  }
+
+  /* search inputs */
+
+  /* Style the search box inside the navigation bar */
+.brand form.formS input[type=text] {
+    float: left;
+    padding: 8px;
+    /* border: none; */
+    margin-top: 8px;
+    margin-right: 16px;
+    margin-left: 16px;
+    font-size: 12px;
+    width: 90%;
+    background-color: var(--color-header-search-bg);
+    border-radius: .25rem;
+    color: var(--color-text-white);
+    border: 1px solid var(--color-header-search-border);
+
+
+  }
+  
+  /* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
+  @media screen and (max-width: 600px) {
+    .brand form.formS input[type=text] {
+      float: none;
+      display: block;
+      text-align: left;
+      width: 80%;
+      margin: 0;
+      padding: 14px;
+      background-color: var(--color-header-search-bg);
+    border-radius: .25rem;
+    color: var(--color-text-white);
+    /* border: 1px solid var(--color-header-search-border); */
+
+
+    }
+
+    .brand form.formS input[type=text] {
+      border: 1px solid #ccc;
+    }
+  }
+
+  .posRel{
+    position: relative;
+  }
+
+  .relCss {
+      
+      flex: unset;   /* use for default value set to flex: auto  when click on */
+    min-width: 20vw;  /* use for default value set to min-width: unset when click on  */
+      padding-right: 18px;
+    margin-top: 3px;
+  }
+
+  .brand form #searchIcon {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 4.375rem;
+    height: 2.375rem;
+    line-height: 3.0rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+    right: 0;
+  }
+  .parentFlex{    display: flex;}
+  #slashIcon{
+    width: 100%;
+    padding-top: 11px;
+  }
+
+/* for hexadecimal with num & character <span id="bellIcon"> &#x1F514</span> */
+/* for decimal with num only that change<span id="bellIcon"> &#9658</span> */
+  
+#bellIcon{
+    font-size: 10px;
+    /* color: aqua !important; */
+    color: transparent;
+    text-shadow: 0 0 0 rgb(0, 128, 0);
+  }
+
+  #drop-icon{
+    font-size: 15px;
+    position: absolute;
+    top: 13px;
+    /* color: aqua !important; */
+    color: transparent;
+    text-shadow: 0 0 0 rgb(255,255,255)
+  }
+
+   /* {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+   } */
+
+   form.formS a{
+    padding-top: 16px;
+    padding-bottom: 16px;
+   }
+   ul.menu li#bellicon {
+    margin-top: 15px;
+   }
+
+   ul.menu li#plusIcon {
+    margin-top: 2px;
+    margin-right:5px;
+    margin-left: 5px;
+   }
+
+   ul.menu li#profileIcon {
+    margin-top: 2px;
+    margin-right:5px;
+    margin-left: 5px;
+   }
+
+   div.navigation ul.menu {
+    margin-top: 0px;
+    margin-bottom: 0px;
+   }
+
+   .fz5{font-size: 0.5rem;}
+.fz65{font-size: 0.65rem;}
+   .profileAvail{
+     margin: 5px 10px;
+    border: 1px solid rgb(207,208,209);
+  }
+   
+    .contentCenter{
+      justify-content: center;
+    align-items: center;
+    }
+
+    div.workStatus {
+      white-space: nowrap; 
+      width: 100px; 
+      overflow: hidden;
+      text-overflow: ellipsis;
+      
+    }
+    
+    div.workStatus:hover {
+      overflow: visible;
+    }
+  

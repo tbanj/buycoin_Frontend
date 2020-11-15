@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>BuyCoins Frontend Coding Challenge</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../assets/css/index.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../assets/css/navbar.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../assets/css/dropdown.css'>
+    
+    <script src='main.js'></script>
+</head>
+<body>
+    <!-- navbar -->
+    <!-- <form>
+        <div style="color: white; font-size: 14px;">gdghdhd</div>
+    </form> -->
+    <nav>
+        <div class="brand parentFlex">
+            
+         <img class="responsiveImg" src="../assets/github_3.png" alt="navbar-img"/>
+         <!--
+  <a href="#contact">Contact</a> -->
+            <form class="formS relCss posRel">
+                <span id="searchIcon"> <img id="slashIcon"
+                    width="10" height="25" src="../assets/search-key-slash.svg" alt="" class="mr-2 header-search-key-slash"/></span>
+                <input class="" type="text" placeholder="Search or jump to…">
+           
+            
+        </form>
+            <a href="#pull-request">Pull Request</a>
+            <a href="#issues">Issues</a>
+            <a href="#marketplace">Marketplace</a>
+            <a href="#explore">Explore</a>
+        </div>
+        <div class="navigation">
+          <ul class="menu">
+            <li id="bellicon"><a href="#"><span ><img height="20" src="../assets/images/notification.svg" alt="bell icon"/>
+            </span></a></li>
+            <li id="plusIcon"><div class="dropdown">
+                <div id="activateDropdown" class="dropbtn posRel" >
+                    <img class="dropbtn"  height="15" src="../assets/images/plus.svg" alt="bell icon"/>
+                    <span id="drop-icon">&#9663</span>
+                </div>
+                <div id="plusDropdown" class="dropdown-content">
+                  <a href="#home">New repository</a>
+                  <a href="#about">Import repository</a>
+                  <a href="#contact">New gist</a>
+                  <a href="#contact">New organization</a>
+                  <div role="none" class="drop-divider"></div>
+                  <div class="dropdown-header">
+                    <span>This repository</span>
+                </div>
+                <a href="#contact">New organization</a>
+                </div>
+              </div></li>
+
+              <!-- about user and setting -->
+              <li id="profileIcon"><div class="dropdown">
+                <div class="profiledropbtn posRel" onclick="getProfile()">
+                    <img class="profiledropbtn profiledb"  width="20" height="20" src="../assets/images/6.jpg" alt="bell icon"/>
+                    <span id="drop-icon">&#9663</span>
+                </div>
+                <div id="profileDropdown" class="profile-dropdown-content">
+                  <a href="#home">Signed as <strong>tbanj</strong></a>
+                  <div role="none" class="drop-divider"></div>
+                  <div class="parentBody profileAvail contentCenter"> 
+                    <div>
+                        <g-emoji alias="thought_balloon" src="../assets/images/1f4ad.png">💭</g-emoji></div>
+                  <div class="z65 workStatus">Available for remote work</div>
+                </div>
+                <div role="none" class="drop-divider"></div>
+                  <a href="#about">Your profile</a>
+                  <a href="#contact">Your repositories</a>
+                  <a href="#contact">Your projects</a>
+                  <a href="#contact">Your stars</a>
+                  <a href="#contact">Your gists</a>
+                  <div role="none" class="drop-divider"></div>
+                  <a href="#contact">Feature preview</a>
+                  <a href="#contact">Help</a>
+                  <a href="#contact">Settings</a>
+                  <a href="#contact">Sign out</a>
+                </div>
+              </div></li>
+            
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Sub Menu of the user profile -->
+      <section class="parentBody contentCenter">
+          <div>gghh</div>
+            <!-- <div>
+                <div><img src="" alt="overview"></div>
+                <div></div>
+            </div>
+            
+            <div></div>
+            <div></div>
+            <div></div> -->
+      </section>
+</body>
+
+<!-- scripts test for data load-->
+<script>
+    function testArr(arr) {
+        var out = "";
+        var i;
+        for(i = 0; i<arr.length; i++) {
+            out += '<a href="' + arr[i].url + '">' + arr[i].display + '</a><br>';
+        }
+        document.getElementById("id01").innerHTML = out;
+    }
+    </script>
+
+    <!-- getData(data); for github detail -->
+    
+    <script>
+        
+        </script>
+    <script src="../assets/js/data.js"></script>
+    <script src="../assets/js/testArr.js"></script>
+    <script src="../assets/js/dropdown.js"></script>
+    <!-- <script src="../assets/js/profileDropdown.js"></script> -->
+</html>
