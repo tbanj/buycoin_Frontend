@@ -43,27 +43,99 @@
           <img class=" profiledb" width="20" height="20" src="../assets/images/6.jpg" alt="bell icon">
           <div role="none" class="drop-divider"></div>
           <a href="#">Sign out</a>
-          <!-- Search or jump to
-
-Hr
-Dashboard
-hr
-Pull request
-Hr
-Issues
-Hr
-Marketplace
-Hr
-Explore
-Ht
-Image thanji
-Hr
-Sign out -->
+         
         </div>
       </div>
-    <nav>
-        <!-- mobile navbar view -->
-        <div class="mobileBrand " >
+
+      <div class="mobile-container mobileBrand">
+
+        <!-- Top Navigation Menu -->
+        <div class="topnav">
+          <!-- <a href="#home" class="active">Logo</a> -->
+          
+          <div class="parentFlex">
+            <div id="iconMenuMobile">
+                <span style="font-size:30px;cursor:pointer" onclick="getMobileMenu()">&#9776; </span>
+            </div>
+
+            <div class="fz65">
+                <img src="../assets/github_3.png" alt="mobile-logo" width="30" height="30">
+            </div>
+            <div style="flex: 1;" class="fz65">
+                <div class="fr">
+                    <img src="../assets/images/notification.svg" alt="mobile-logo" width="30" height="30">
+                </div>
+            </div>
+
+          </div>
+          <div id="myLinks">
+            <!-- <form class="formS relCss posRel">
+                <input class="" type="text" placeholder="Search">
+        </form> -->
+        <form class="mobileSearch ">
+            <input id="mobileInputSearch" type="text" placeholder="Search..." />
+        </form>
+          <div id="headContainerF" >
+            <a href="#" class="fz65">Dashboard</a>
+          </div>
+          <div class="headContainer"> 
+              <a href="#" class="fz65">Pull request</a>
+            </div>
+            <div class="headContainer">
+                <a href="#" class="fz65">Issues</a>
+            </div>
+            <div class="headContainer">
+                <a href="#" class="fz65">Marketplace</a>
+            </div>
+            <div class="headContainer">
+                <a href="#" class="fz65">Explore</a>
+            </div>
+            <div class="headContainer">
+                <div id="mobileImg">
+                    <img class=" profiledb" width="20" height="20" src="../assets/images/6.jpg" alt="bell icon">
+                    <span class="ml10">tbanj</span>
+                  </div>
+            </div>
+            <div class="headContainer">
+                <a href="#" class="fz65">Sign out</a>
+            </div>
+            <!-- <div class="headContainer">
+                <a href="#" class="fz65">Sign out</a>
+            </div> -->
+          
+          </div>
+          <!-- <a style="    padding: 4px 16px;" href="javascript:void(0);" class="icon" onclick="getMobileMenu()">
+            <span style="font-size:30px;cursor:pointer">&#9776;</span>
+          </a> -->
+        </div>
+        
+        <!-- <div style="padding-left:16px">
+          <h3>Vertical Mobile Navbar</h3>
+          <p>This example demonstrates how a navigation menu on a mobile/smart phone could look like.</p>
+          <p>Click on the hamburger menu (three bars) in the top right corner, to toggle the menu.</p>
+        </div> -->
+        
+        <!-- End smartphone / tablet look -->
+        </div>
+
+    <nav id="brandnav" >
+       <!-- start mobile navbar view 2-->
+       <!-- <div class="topnav" style="    display: flex;
+       flex: 1;">
+        <a href="#home" class="active">Logo</a>
+        <div id="myLinks">
+          <a href="#news">News</a>
+          <a href="#contact">Contact</a>
+          <a href="#about">About</a>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="getMobileMenu()">
+          <span style="font-size:30px;cursor:pointer">&#9776;</span>
+        </a>
+      </div> -->
+            <!-- end mobile navbar view 2-->
+
+        <!-- start mobile navbar view 1-->
+        <div class=" " style="display: none;" >
            <div class="parentFlex">
             <div id="iconMenuMobile">
                 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
@@ -79,6 +151,8 @@ Sign out -->
             </div>
            </div>
     </div>
+
+    <!-- end mobile navbar view 1 -->
 
         <!-- large screen navbar view -->
         <div class="brand parentFlex">
@@ -180,6 +254,7 @@ Sign out -->
     
     
 <script>
+    // start mobile navbar view 1
     function openNav() {
       document.getElementById("myNav").style.height = "100%";
     }
@@ -187,6 +262,19 @@ Sign out -->
     function closeNav() {
       document.getElementById("myNav").style.height = "0%";
     }
+// end mobile navbar view 1
+   
+    // start mobile navbar view 2
+    function getMobileMenu() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+
+//  end mobile navbar view 2
     </script>
     <script src="../assets/js/data.js"></script>
     <script src="../assets/js/testArr.js"></script>
