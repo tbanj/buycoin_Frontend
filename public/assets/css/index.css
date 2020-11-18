@@ -226,6 +226,8 @@ a.parentFlex div.profileText{
     text-decoration: underline;
   }
 
+  div.flex5 h3.fzh3{margin-top: 0px;}
+
   .priLangCrl{
     position: relative;
     top: 1px;

@@ -130,7 +130,7 @@
               <!-- about user and setting -->
               <li id="profileIcon"><div class="dropdown">
                 <div class="profiledropbtn posRel" onclick="getProfile()">
-                    <img class="profiledropbtn profiledb"  width="20" height="20" src="assets/images/6.jpg" alt="bell icon"/>
+                    <img id="profileAvatar" class="profiledropbtn profiledb"  width="20" height="20" src="assets/images/personal_look.jpeg" alt="bell icon"/>
                     <span id="drop-icon">&#9663</span>
                 </div>
                 <div id="profileDropdown" class="profile-dropdown-content">
@@ -209,7 +209,7 @@
                     <div class="parentFlex contentCenter" >
                        <div>
                         <a id="imgLink" href="#profileImage" class="posRel">
-                            <img 
+                            <img id="profileImg"
                              src="assets/images/personal_look.jpeg" alt="profile-image" style="
                       
                                 max-width: 100%;
@@ -232,7 +232,7 @@
                                        
                             </h1>
                             <div id="profileBio" class="fz16 profileSubCrl" style="width: 280px;"
-                            >Software Engineer at Josla Electric Company Limited</div>
+                            ></div>
                             
                                 </div>
                        </div>
@@ -306,49 +306,11 @@
 
 <script>
     // set a default value for profile tab as repositories
-    document.getElementById('repositories').style.display = "block";
-    document.getElementById('defaultRepo').classList.add('activeSubMenu');
-    // start mobile navbar view 1
-    function openNav() {
-      document.getElementById("myNav").style.height = "100%";
-    }
-    
-    function closeNav() {
-      document.getElementById("myNav").style.height = "0%";
-    }
-// end mobile navbar view 1
    
-    // start mobile navbar view 2
-    function getMobileMenu() {
-  var x = document.getElementById("myLinks");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
-  }
-}
-
-
-// start for tab changing
-function getTab(evt, cityName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" activeSubMenu", "");
-  }
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " activeSubMenu";
-}
-// end for tab changing
+// end for tab switching
 
     </script>
     <script src="assets/js/data.js"></script>
-    <!-- <link href="./form.html" rel="import" /> -->
-    <script src="assets/js/testArr.js"></script>
     <script src="assets/js/dropdown.js"></script>
     <script src="assets/js/remoteData.js"></script>
 </html>

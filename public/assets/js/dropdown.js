@@ -3,18 +3,11 @@
 
 document.getElementById("activateDropdown").addEventListener("click", getDropdown);
 function getDropdown(event) {
-    // document.getElementById("profileDropdown").classList.toggle("show");
     document.getElementById("plusDropdown").classList.toggle("show");
-    // getData();
-    // console.log(event.target, 'check ');
-    // if (event.target.matches('.dropbtn')) {
-
-    // }
 }
 
 
 function getProfile() {
-    // document.getElementById("plusDropdown").classList.toggle("show");
     document.getElementById("profileDropdown").classList.toggle("show");
 }
 
@@ -48,31 +41,3 @@ window.onclick = function (event) {
     }
 
 }
-
-
-
-    // Close the dropdown if the user clicks outside of it
-    // window.onclick = function (event) {
-
-    // }
-
-
-
-// document.getElementById("activateDropdown").addEventListener("click", getDropdown);
-// function getDropdown(event) {
-
-//     document.getElementById("plusDropdown").classList.toggle("show");
-//     // if (!event.target.matches('.dropbtn')) {
-//     // }
-//     var dropdowns = document.getElementsByClassName("dropdown-content");
-//     var i;
-//     for (i = 0; i < dropdowns.length; i++) {
-//         var openDropdown = dropdowns[i];
-//         if (openDropdown.classList.contains('show')) {
-//             console.log('getDropdown', document.getElementById("plusDropdown").classList.toggle("show"));
-//             // document.getElementById("profileDropdown").classList.remove("show");
-//             openDropdown.classList.remove('show');
-//         }
-//     }
-// }
-

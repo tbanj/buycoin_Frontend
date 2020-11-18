@@ -1,71 +1,73 @@
 function getInfo() {
-    let url = 'https://api.github.com/graphql';
-    let queryData = {
-        query: `
-        {
-            viewer {
-              login
-              repositories(affiliations: OWNER, orderBy: {field: CREATED_AT, direction: ASC}, isFork: false, last: 20, privacy: PUBLIC) {
-                totalCount
-                edges {
-                  node {
-                    description
-                    url
-                    name
-                    isPrivate
-                    updatedAt
-                    object(expression: "master") {
-                      ... on Commit {
-                        history {
-                          totalCount
-                        }
-                        committedDate
-                      }
-                      repository {
-                        refs(refPrefix: "refs/heads/", first: 10) {
-                          totalCount
-                        }
-                        stargazerCount
-                      }
-                    }
-                    primaryLanguage {
-                      color
-                      name
-                      id
-                    }
-                    pullRequests {
-                      totalCount
-                    }
+  let url = 'https://api.github.com/graphql';
+  let queryData = {
+    query: `
+    {
+      viewer {
+        login
+        repositories(affiliations: OWNER, orderBy: {field: CREATED_AT, direction: ASC}, isFork: false, last: 20, privacy: PUBLIC) {
+          totalCount
+          edges {
+            node {
+              description
+              url
+              name
+              isPrivate
+              updatedAt
+              object(expression: "master") {
+                ... on Commit {
+                  history {
+                    totalCount
                   }
+                  committedDate
+                }
+                repository {
+                  refs(refPrefix: "refs/heads/", first: 10) {
+                    totalCount
+                  }
+                  stargazerCount
                 }
               }
-              avatarUrl(size: 10)
-              bio
-              bioHTML
-              name
+              primaryLanguage {
+                color
+                name
+                id
+              }
+              pullRequests {
+                totalCount
+              }
             }
           }
-          
-          `
-    }
-    fetch(url, {
-        method: 'POST',
-        body: JSON.stringify(queryData),
-        headers: {
-            'Authorization': 'Bearer 659c104de4c7e39dda4b5b3b31c26f78c1bf1d48',
-            'Content-Type': 'Application/json'
         }
-    }).then(res => {
+        avatarUrl(size: 20)
+        bio
+        bioHTML
+        name
+      }
+      user(login: "tbanj") {
+        avatarUrl(size: 280)
+      }
+    }       
+          `
+  }
+  fetch(url, {
+    method: 'POST',
+    body: JSON.stringify(queryData),
+    headers: {
+      'Authorization': 'Bearer 659c104de4c7e39dda4b5b3b31c26f78c1bf1d48',
+      'Content-Type': 'Application/json'
+    }
+  }).then(res => {
 
-        if (res.status === 400) { return res.json(); }
-        if (res.ok) {
-            return res.json();
-        } else { throw new Error('network error'); }
+    if (res.status === 400) { return res.json(); }
+    if (res.ok) {
+      return res.json();
+    } else { throw new Error('network error'); }
+  })
+    .then(async (parsedRes) => {
+      // console.log('parsedRes', parsedRes);
+      getRepoList(parsedRes);
     })
-        .then(async (parsedRes) => {
-            // console.log('parsedRes', parsedRes);
-            getRepoList(parsedRes);
-        })
 }
 
 getInfo();
@@ -73,25 +75,27 @@ getInfo();
 
 
 function getRepoList(arr) {
-    console.log('github data', arr.data.viewer.repositories.edges[0]['node']['object']);
-    let updateData = "";
-    let updatedMoment = "";
-    let profileName = "";
-    let profileUsername = "";
-    let profileBio = "";
-    let repoPubCount = "";
-    console.log('start', arr.data.viewer.repositories.edges[0]['node']['object']['repository']['stargazerCount']);
-    console.log('github', arr.data.viewer.repositories.edges[0]);
-    profileBio = arr.data.viewer.bio;
-    profileName = arr.data.viewer.name;
-    profileUsername = arr.data.viewer.login;
-    repoPubCount = arr.data.viewer.repositories.totalCount;
-    var repoArr = arr.data.viewer.repositories.edges;
-    var dataList = "";
-    var j;
-    for (j = 0; j < repoArr.length; j++) {
-        updatedMoment = getDate(repoArr[j]['node']['updatedAt']);
-        dataList += `
+  let updateData = "";
+  let updatedMoment = "";
+  let profileName = "";
+  let profileUsername = "";
+  let profileBio = "";
+  let repoPubCount = "";
+  let profileImg = "";
+  console.log('github', arr.data);
+  profileImg = arr.data.user.avatarUrl;
+  profileAvatar = arr.data.user.avatarUrl;
+
+  profileBio = arr.data.viewer.bio;
+  profileName = arr.data.viewer.name;
+  profileUsername = arr.data.viewer.login;
+  repoPubCount = arr.data.viewer.repositories.totalCount;
+  var repoArr = arr.data.viewer.repositories.edges;
+  var dataList = "";
+  var j;
+  for (j = 0; j < repoArr.length; j++) {
+    updatedMoment = getDate(repoArr[j]['node']['updatedAt']);
+    dataList += `
             <div class="parentFlex bbgr mt4">
 <div  class="parentFlex subRepoContainer">
  <div class=" flex5" >
@@ -113,15 +117,15 @@ function getRepoList(arr) {
                 </span>
             
                 <span class="mr3 ml3" style='display:  ${repoArr[j]['node']['object'] && repoArr[j]['node']['object']['repository']
-                && `${repoArr[j]['node']['object']['repository']['stargazerCount']}` > 0 ? 'inline-block' : 'none'}; 
+        && `${repoArr[j]['node']['object']['repository']['stargazerCount']}` > 0 ? 'inline-block' : 'none'}; 
              ' ><svg class="octicon octicon-star mr4"
                       viewBox="0 0 16 16" version="1.1" width="12" height="12" aria-hidden="true"><path fill-rule="evenodd" d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25zm0 2.445L6.615 5.5a.75.75 0 01-.564.41l-3.097.45 2.24 2.184a.75.75 0 01.216.664l-.528 3.084 2.769-1.456a.75.75 0 01.698 0l2.77 1.456-.53-3.084a.75.75 0 01.216-.664l2.24-2.183-3.096-.45a.75.75 0 01-.564-.41L8 2.694v.001z"></path></svg>
              <span class="fz12 fcolor">${repoArr[j]['node']['object']['repository']['stargazerCount']}</span>
                 </span>
 
                 <span class="mr10 ml10" style='display:  ${repoArr[j]['node']['object'] && repoArr[j]['node']['object']['repository']
-                && `${repoArr[j]['node']['object']['repository']['refs']}`
-                && `${repoArr[j]['node']['object']['repository']['refs']['totalCount']}` > 0 ? 'inline-block' : 'none'}; 
+        && `${repoArr[j]['node']['object']['repository']['refs']}`
+        && `${repoArr[j]['node']['object']['repository']['refs']['totalCount']}` > 0 ? 'inline-block' : 'none'}; 
              ' ><span ><svg class="octicon octicon-git-branch text-gray" height="12" viewBox="0 0 16 16" version="1.1" width="12" aria-hidden="true"><path fill-rule="evenodd" d="M11.75 2.5a.75.75 0 100 1.5.75.75 0 000-1.5zm-2.25.75a2.25 2.25 0 113 2.122V6A2.5 2.5 0 0110 8.5H6a1 1 0 00-1 1v1.128a2.251 2.251 0 11-1.5 0V5.372a2.25 2.25 0 111.5 0v1.836A2.492 2.492 0 016 7h4a1 1 0 001-1v-.628A2.25 2.25 0 019.5 3.25zM4.25 12a.75.75 0 100 1.5.75.75 0 000-1.5zM3.5 3.25a.75.75 0 111.5 0 .75.75 0 01-1.5 0z"></path></svg></span>
              <span class="fz12 fcolor">${repoArr[j]['node']['object']['repository']['refs']['totalCount']}</span>
                 </span>
@@ -176,17 +180,19 @@ function getRepoList(arr) {
   </div>
 </div>
 </div>`
-    }
+  }
 
-    document.getElementById("repoList").innerHTML = dataList;
-    document.getElementById("profileName").innerHTML = profileName;
-    const usernameArr = document.getElementsByClassName("profileUsername");
-    document.getElementById("profileBio").innerHTML = profileBio;
-    document.getElementById("repoPubCount").innerHTML = repoPubCount;
+  document.getElementById("repoList").innerHTML = dataList;
+  document.getElementById("profileName").innerHTML = profileName;
+  const usernameArr = document.getElementsByClassName("profileUsername");
+  document.getElementById("profileBio").innerHTML = profileBio;
+  document.getElementById("repoPubCount").innerHTML = repoPubCount;
+  document.getElementById("profileImg").src = profileImg;
+  document.getElementById("profileAvatar").src = profileAvatar;
 
-    // loop through profileUsername class
-    for (let un = 0; un < usernameArr.length; un++) {
-        usernameArr[un].innerHTML = profileUsername;
-    }
+  // loop through profileUsername class
+  for (let un = 0; un < usernameArr.length; un++) {
+    usernameArr[un].innerHTML = profileUsername;
+  }
 
 }

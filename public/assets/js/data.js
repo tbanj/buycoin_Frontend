@@ -1,11 +1,39 @@
+document.getElementById('repositories').style.display = "block";
+document.getElementById('defaultRepo').classList.add('activeSubMenu');
+// start mobile navbar view 1
+function openNav() {
+    document.getElementById("myNav").style.height = "100%";
+}
+
+function closeNav() {
+    document.getElementById("myNav").style.height = "0%";
+}
+// end mobile navbar view 1
+
+// start mobile navbar view 2
+function getMobileMenu() {
+    var x = document.getElementById("myLinks");
+    if (x.style.display === "block") {
+        x.style.display = "none";
+    } else {
+        x.style.display = "block";
+    }
+}
 
 
-function getDays(date1) {
-    // var date1 = new Date("2020-02-17T01:26:30Z");
-    var date2 = new Date();
-    var Difference_In_Time = date2.getTime() - date1.getTime();
-    var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
-    return Math.floor(Difference_In_Days);
+// start for tab switching
+function getTab(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" activeSubMenu", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " activeSubMenu";
 }
 
 function getDate(data) {
@@ -13,5 +41,4 @@ function getDate(data) {
     return `${extract[2]} ${extract[1]}`
 }
 
-// getRepoData(data);
 
