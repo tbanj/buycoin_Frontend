@@ -1,3 +1,4 @@
+
 function getInfo() {
   let url = 'https://api.github.com/graphql';
   let queryData = {
@@ -54,7 +55,7 @@ function getInfo() {
     method: 'POST',
     body: JSON.stringify(queryData),
     headers: {
-      'Authorization': 'Bearer 659c104de4c7e39dda4b5b3b31c26f78c1bf1d48',
+      'Authorization': `Bearer  659c104de4c7e39dda4b5b3b31c26f78c1bf1d48`,
       'Content-Type': 'Application/json'
     }
   }).then(res => {
@@ -65,7 +66,6 @@ function getInfo() {
     } else { throw new Error('network error'); }
   })
     .then(async (parsedRes) => {
-      // console.log('parsedRes', parsedRes);
       getRepoList(parsedRes);
     })
 }
@@ -82,7 +82,6 @@ function getRepoList(arr) {
   let profileBio = "";
   let repoPubCount = "";
   let profileImg = "";
-  console.log('github', arr.data);
   profileImg = arr.data.user.avatarUrl;
   profileAvatar = arr.data.user.avatarUrl;
 
