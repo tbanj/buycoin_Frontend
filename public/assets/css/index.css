@@ -1,0 +1,370 @@
+body {
+    margin: 0;
+}
+
+#subText {
+    color: orange;
+    flex: 1;
+    text-align: center;
+    justify-content: center;
+}
+
+.parentBody{
+    display: flex;
+    flex: 1;
+}
+.mt4 {
+    margin-top: 24px;
+}
+
+#textData {
+    justify-content: flex-start;
+}
+
+
+.px4{
+    padding-right: 16px !important;
+}
+
+/* section.parentBody{
+    margin-top: 25px;
+} */
+
+@media only screen and (min-width: 768px) {
+    .pl4{
+        padding-left: 24px !important;
+    }
+    .pr4{
+        padding-right: 24px !important;
+    }
+}
+
+@media (min-width: 1012px) {
+.pr-large-5 {
+    padding-right: 32px !important;
+}
+.pl-large-5{
+    padding-left:  32px !important;
+}
+}
+
+.flex1{
+    flex: 1;
+}
+.flex2{
+    flex: 2;
+}
+
+.flex3{
+    flex: 3;
+}
+.flex4{
+    flex: 4;
+}
+
+.flex5{
+    flex: 5;
+}
+.flex6{
+    flex: 6;
+}
+
+.flex7{
+    flex: 7;
+}
+.flex8{
+    flex: 8;
+}
+
+/* for profile Sub Menu start */
+#profileHeading {
+    flex: 1 !important;
+    /* flex-direction: row; */
+}
+
+
+a.parentFlex div.profileText{
+    font-size: 14px;
+    padding-bottom: 10px;
+  }
+
+  .repoCount {
+    background-color: #d1d5da;
+    border-radius: 2em;
+  }
+
+  nav a.parentFlex{
+    padding: 10px 10px;
+  justify-content: center;
+  align-items: center;
+  /* border-bottom: 2px solid rgb(249, 130, 108); */
+  cursor: pointer;     
+  text-decoration-line: none;
+  }
+  div#profileHeading nav a:hover{
+    border-bottom: 2px solid#d1d5da;
+  }
+
+  div#profileHeading nav a:active{
+    border-bottom: 2px solid rgb(249, 130, 108);
+  }
+
+
+
+  .psm5{
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+
+  div.padicon.psm5{
+    padding-bottom: 5px;
+  }
+
+  /* for profile Sub Menu start */
+  div#profileSubMenu {
+    flex: 1;
+    border-bottom: 2px solid#d1d5da;
+  }
+
+  #searchRepoForm{
+    border: 1px solid lightgrey !important;
+    border-radius: .25rem;
+  }
+  #searchRepoIn{
+    padding: 8px;
+    /* width: 100%; */
+    font-size: 12px;
+    width: 100%;
+    /* background-color: var(--color-header-search-bg); */
+    border-radius: .25rem;
+  }
+
+  .tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border-top: none;
+  }
+
+  
+
+  .activeSubMenu {
+    border-bottom: 2px solid rgb(249, 130, 108);
+  }
+
+  /* start Repo new Search table */
+
+.repoSearch input[type=text] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    box-sizing: border-box;
+  }
+  
+  
+  
+  .col-100 {
+    float: left;
+    width: 100%;
+    margin-top: 6px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* end Repo new Search table */
+
+  .mtmb15 {
+      margin-top: 15px;
+      margin-bottom: 15px;
+  }
+
+  div#repositories .repoDesc{
+    display: inline-flex;
+    border-bottom: 1px solid#d1d5da;
+    margin-bottom: 15px;
+  }
+
+  div#repoTextUnderline{
+    border-bottom: 1px solid#d1d5da;
+    margin-top: 15px;
+  }
+
+  div.repoTitle{
+      flex-direction: column;
+  }
+
+  .fzh3{
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .repoType{
+    display: inline-block;
+    padding: 0 7px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    border-radius: 2em;
+    background-color: initial!important;
+    border: 1px solid#d1d5da;
+    margin-left: 4px!important;
+    margin-bottom: 4px!important;
+
+  }
+
+  div.parentFlex h3 a#repoText{
+    color: #0366d6 !important;
+    text-decoration: none;
+  }
+  div.parentFlex h3 a#repoText:hover{
+    text-decoration: underline;
+  }
+
+  .priLangCrl{
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+  }
+
+  .mr3{
+    margin-right: 16px!important;
+  }
+
+  .ml16{
+    margin-left: 16px!important;
+  }
+
+  .ml10{
+    margin-left: 10px!important;
+  }
+
+  .mr10{
+    margin-right: 10px!important;
+  }
+
+  .fz12{font-size: 12px!important;}
+  .fz14{font-size: 14px!important;}
+  .col-75{width: 75%;}
+  .mb8{
+    margin-bottom: 8px!important;
+  }
+  .fcolor{
+    color: gray;
+  }
+
+  .bbgr{
+    border-bottom: 1px solid#d1d5da;
+  }
+
+  .subRepoContainer{
+    flex: 1;
+    margin-bottom: 35px;
+    margin-right: 35px;
+
+  }
+
+  .btnStar{padding: 3px 12px;
+    font-size: 12px;
+    line-height: 20px;}
+
+    button.btnStar{
+        position: relative;
+    display: inline-block;
+    padding: 5px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    border: 1px solid;
+    border-radius: 6px;
+    -moz-appearance: none;
+    appearance: none;
+    }
+
+    .mr4{
+        margin-right: 4px!important;
+    }
+
+    #textBtn{
+        background-color: DodgerBlue;
+        border: none;
+        color: white;
+        padding: 12px 16px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+  
+    div a#imgLink{
+        width: 260px;
+        height: 260px;
+    }
+
+    div a#imgLink img{
+        border-radius: 50%!important;
+    }
+
+    .clearfix::after{
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      div.statusCircle{
+        position: absolute;
+        bottom: 34px;
+        right: 0;
+        /* display: inline-block; */
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        background-color: #ffffff;
+        border: 1px solid#d1d5da;
+      }
+
+      .usernameC{
+          color: #586069;
+          font-size: 20px;
+      }
+
+      .fullname{
+        font-size: 26px;
+        line-height: 1.25; 
+        font-weight: bold;
+      }
+
+      .profileSubCrl{
+        color: #24292E;
+      }
+
+      .fz16{ font-size: 16px;}
+
+      div h1#nameDir{
+        flex-direction: column;
+      }
+
+      button.btnStar.btnStarView{
+        display: flex !important;
+        border: 1px solid#d1d5da;
+      }
+      
+
+      .mt10{ margin-top: 10px;}
+
+      .ml30 {margin-left: 30px;}
+
+      div.graphActivity{
+        flex-direction: column-reverse;
+        height: 100%;
+      }

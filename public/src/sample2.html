@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>BuyCoins Frontend Coding Challenge</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../assets/css/index.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../assets/css/navbar.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../assets/css/dropdown.css'>
+    
+    <script src='main.js'></script>
+    
+</head>
+<body>
+    <!-- navbar -->
+    <!-- <form>
+        <div style="color: white; font-size: 14px;">gdghdhd</div>
+    </form> -->
+
+    <!-- mobile navbar view content -->
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <!-- search input -->
+            <form class="formS relCss posRel">
+                <span id="searchIcon"> <img id="slashIcon"
+                    width="10" height="25" src="../assets/search-key-slash.svg" alt="" class="mr-2 header-search-key-slash"/></span>
+                <input class="" type="text" placeholder="Search or jump to…">
+        </form>
+            <div role="none" class="drop-divider"></div>
+          <a href="#">Dashboard</a>
+          <div role="none" class="drop-divider"></div>
+          <a href="#">Pull request</a>
+          <div role="none" class="drop-divider"></div>
+          <a href="#">Issues</a>
+          <div role="none" class="drop-divider"></div>
+          <a href="#">Marketplace</a>
+          
+          <div role="none" class="drop-divider"></div>
+          <a href="#">Explore</a>
+          <div role="none" class="drop-divider"></div>
+          <!-- <a href="#">image tbanj </a> -->
+          <img class=" profiledb" width="20" height="20" src="../assets/images/6.jpg" alt="bell icon">
+          <div role="none" class="drop-divider"></div>
+          <a href="#">Sign out</a>
+         
+        </div>
+      </div>
+
+      <div class="mobile-container mobileBrand">
+
+        <!-- Top Navigation Menu -->
+        <div class="topnav">
+          <!-- <a href="#home" class="active">Logo</a> -->
+          
+          <div class="parentFlex">
+            <div id="iconMenuMobile">
+                <span style="font-size:30px;cursor:pointer" onclick="getMobileMenu()">&#9776; </span>
+            </div>
+
+            <div class="fz65">
+                <img src="../assets/github_3.png" alt="mobile-logo" width="30" height="30">
+            </div>
+            <div style="flex: 1;" class="fz65">
+                <div class="fr">
+                    <img src="../assets/images/notification.svg" alt="mobile-logo" width="30" height="30">
+                </div>
+            </div>
+
+          </div>
+          <div id="myLinks">
+            <!-- <form class="formS relCss posRel">
+                <input class="" type="text" placeholder="Search">
+        </form> -->
+        <form class="mobileSearch ">
+            <input id="mobileInputSearch" type="text" placeholder="Search..." />
+        </form>
+          <div id="headContainerF" >
+            <a href="#" class="fz65">Dashboard</a>
+          </div>
+          <div class="headContainer"> 
+              <a href="#" class="fz65">Pull request</a>
+            </div>
+            <div class="headContainer">
+                <a href="#" class="fz65">Issues</a>
+            </div>
+            <div class="headContainer">
+                <a href="#" class="fz65">Marketplace</a>
+            </div>
+            <div class="headContainer">
+                <a href="#" class="fz65">Explore</a>
+            </div>
+            <div class="headContainer">
+                <div id="mobileImg">
+                    <img class=" profiledb" width="20" height="20" src="../assets/images/6.jpg" alt="bell icon">
+                    <span class="ml10">tbanj</span>
+                  </div>
+            </div>
+            <div class="headContainer">
+                <a href="#" class="fz65">Sign out</a>
+            </div>
+            <!-- <div class="headContainer">
+                <a href="#" class="fz65">Sign out</a>
+            </div> -->
+          
+          </div>
+          <!-- <a style="    padding: 4px 16px;" href="javascript:void(0);" class="icon" onclick="getMobileMenu()">
+            <span style="font-size:30px;cursor:pointer">&#9776;</span>
+          </a> -->
+        </div>
+        
+        <!-- <div style="padding-left:16px">
+          <h3>Vertical Mobile Navbar</h3>
+          <p>This example demonstrates how a navigation menu on a mobile/smart phone could look like.</p>
+          <p>Click on the hamburger menu (three bars) in the top right corner, to toggle the menu.</p>
+        </div> -->
+        
+        <!-- End smartphone / tablet look -->
+        </div>
+
+            <nav id="brandnav" >
+              <!-- start mobile navbar view 2-->
+              <!-- <div class="topnav" style="    display: flex;
+              flex: 1;">
+               <a href="#home" class="active">Logo</a>
+               <div id="myLinks">
+                 <a href="#news">News</a>
+                 <a href="#contact">Contact</a>
+                 <a href="#about">About</a>
+               </div>
+               <a href="javascript:void(0);" class="icon" onclick="getMobileMenu()">
+                 <span style="font-size:30px;cursor:pointer">&#9776;</span>
+               </a>
+             </div> -->
+                <!-- end mobile navbar view 2-->
+
+                   <!-- start mobile navbar view 1-->
+                   <div class=" " style="display: none;" >
+                      <div class="parentFlex">
+                       <div id="iconMenuMobile">
+                           <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+                       </div>
+
+                       <div class="fz65">
+                           <img src="../assets/github_3.png" alt="mobile-logo" width="30" height="30">
+                       </div>
+                       <div style="flex: 1;" class="fz65">
+                           <div class="fr">
+                               <img src="../assets/images/notification.svg" alt="mobile-logo" width="30" height="30">
+                           </div>
+                       </div>
+                      </div>
+               < /div>
+
+    
+
+        <!-- large screen navbar view -->
+        <div class="brand parentFlex">
+            
+         <!-- <img class="responsiveImg" src="../assets/github_3.png" alt="navbar-img"/> -->
+         <img height="30" width="30" src="../assets/github_3.png" alt="bell icon" style="max-width: 30px;
+                /* height: auto; */
+                padding-top: 10px;
+                padding-bottom: 10px;/* display: none; */">
+                <!--
+                <a href="#contact">Contact</a> -->
+            <form class="formS relCss posRel">
+                <span id="searchIcon"> <img id="slashIcon"
+                    width="10" height="25" src="../assets/search-key-slash.svg" alt="" class="mr-2 header-search-key-slash"/></span>
+                <input class="" type="text" placeholder="Search or jump to…">
+        </form>
+            <a href="#pull-request">Pull Request</a>
+            <a href="#issues">Issues</a>
+            <a href="#marketplace">Marketplace</a>
+            <a href="#explore">Explore</a>
+        </div>
+        <div class="navigation">
+          <ul class="menu">
+            <li id="bellicon"><a href="#"><span ><img height="20" src="../assets/images/notification.svg" alt="bell icon"/>
+            </span></a></li>
+            <li id="plusIcon"><div class="dropdown">
+                <div id="activateDropdown" class="dropbtn posRel" >
+                    <img class="dropbtn"  height="15" src="../assets/images/plus.svg" alt="bell icon"/>
+                    <span id="drop-icon">&#9663</span>
+                </div>
+                <div id="plusDropdown" class="dropdown-content">
+                  <a href="#home">New repository</a>
+                  <a href="#about">Import repository</a>
+                  <a href="#contact">New gist</a>
+                  <a href="#contact">New organization</a>
+                  <div role="none" class="drop-divider"></div>
+                  <div class="dropdown-header">
+                    <span>This repository</span>
+                </div>
+                <a href="#contact">New organization</a>
+                </div>
+              </div></li>
+
+              <!-- about user and setting -->
+              <li id="profileIcon"><div class="dropdown">
+                <div class="profiledropbtn posRel" onclick="getProfile()">
+                    <img class="profiledropbtn profiledb"  width="20" height="20" src="../assets/images/6.jpg" alt="bell icon"/>
+                    <span id="drop-icon">&#9663</span>
+                </div>
+                <div id="profileDropdown" class="profile-dropdown-content">
+                  <a href="#home">Signed as <strong>tbanj</strong></a>
+                  <div role="none" class="drop-divider"></div>
+                  <div class="parentBody profileAvail contentCenter"> 
+                    <div>
+                        <g-emoji alias="thought_balloon" src="../assets/images/1f4ad.png">💭</g-emoji></div>
+                  <div class="z65 workStatus">Available for remote work</div>
+                </div>
+                <div role="none" class="drop-divider"></div>
+                  <a href="#about">Your profile</a>
+                  <a href="#contact">Your repositories</a>
+                  <a href="#contact">Your projects</a>
+                  <a href="#contact">Your stars</a>
+                  <a href="#contact">Your gists</a>
+                  <div role="none" class="drop-divider"></div>
+                  <a href="#contact">Feature preview</a>
+                  <a href="#contact">Help</a>
+                  <a href="#contact">Settings</a>
+                  <a href="#contact">Sign out</a>
+                </div>
+              </div></li>
+            
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Sub Menu of the user profile -->
+      <section class="parentBody mt4">
+          <!-- <div>gghh</div> -->
+          <div id="profileSubMenu"class="parentFlex pr-large-5 pl-large-5">
+             <div id="profileHeading" class="pl4 pr4 parentFlex">
+                <div class="flex2  posRel"></div>
+                <nav class="flex5 parentFlex">
+                   <a   onclick="getTab(event, 'overview')" href="#overview" class="parentFlex tablinks" style="cursor: pointer;">
+                       <div class="psm5 padicon">
+                           <svg class="octicon octicon-book UnderlineNav-octicon hide-sm" height="16" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"><path fill-rule="evenodd" d="M0 1.75A.75.75 0 01.75 1h4.253c1.227 0 2.317.59 3 1.501A3.744 3.744 0 0111.006 1h4.245a.75.75 0 01.75.75v10.5a.75.75 0 01-.75.75h-4.507a2.25 2.25 0 00-1.591.659l-.622.621a.75.75 0 01-1.06 0l-.622-.621A2.25 2.25 0 005.258 13H.75a.75.75 0 01-.75-.75V1.75zm8.755 3a2.25 2.25 0 012.25-2.25H14.5v9h-3.757c-.71 0-1.4.201-1.992.572l.004-7.322zm-1.504 7.324l.004-5.073-.002-2.253A2.25 2.25 0 005.003 2.5H1.5v9h3.757a3.75 3.75 0 011.994.574z"></path></svg>
+                     </div>
+                       <div class="profileText">Overview</div>
+                     </a>
+
+
+                     <a id="defaultRepo" onclick="getTab(event, 'repositories')" href="#repositories"  class="parentFlex tablinks" style="cursor: pointer;     text-decoration-line: none;">
+                        <div class="psm5 padicon">
+                            <svg class="octicon octicon-repo UnderlineNav-octicon hide-sm" height="16" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"><path fill-rule="evenodd" d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z"></path></svg>
+                         </div>
+                        <div class="profileText">Repositories</div>
+                        <div class="profileText" style="padding-left: 5px;">
+                            <div class="repoCount">85</div>
+                        </div>
+                      </a>
+
+                      <a onclick="getTab(event, 'projects')" href="#projects" class="parentFlex tablinks" style="cursor: pointer;">
+                        <div class="psm5 padicon">
+                            <svg class="octicon octicon-project UnderlineNav-octicon hide-sm" height="16" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"><path fill-rule="evenodd" d="M1.75 0A1.75 1.75 0 000 1.75v12.5C0 15.216.784 16 1.75 16h12.5A1.75 1.75 0 0016 14.25V1.75A1.75 1.75 0 0014.25 0H1.75zM1.5 1.75a.25.25 0 01.25-.25h12.5a.25.25 0 01.25.25v12.5a.25.25 0 01-.25.25H1.75a.25.25 0 01-.25-.25V1.75zM11.75 3a.75.75 0 00-.75.75v7.5a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75zm-8.25.75a.75.75 0 011.5 0v5.5a.75.75 0 01-1.5 0v-5.5zM8 3a.75.75 0 00-.75.75v3.5a.75.75 0 001.5 0v-3.5A.75.75 0 008 3z"></path></svg>
+                         
+                        </div>
+                        <div class="profileText">Projects</div>
+                      </a>
+
+               
+                      <a onclick="getTab(event, 'packages')" href="#packages" class="parentFlex tablinks" style="cursor: pointer;">
+                        <div class="psm5 padicon">
+                            <svg class="octicon octicon-package UnderlineNav-octicon hide-sm" height="16" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.878.392a1.75 1.75 0 00-1.756 0l-5.25 3.045A1.75 1.75 0 001 4.951v6.098c0 .624.332 1.2.872 1.514l5.25 3.045a1.75 1.75 0 001.756 0l5.25-3.045c.54-.313.872-.89.872-1.514V4.951c0-.624-.332-1.2-.872-1.514L8.878.392zM7.875 1.69a.25.25 0 01.25 0l4.63 2.685L8 7.133 3.245 4.375l4.63-2.685zM2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432L2.5 5.677zm6.25 8.271l4.625-2.683a.25.25 0 00.125-.216V5.677L8.75 8.432v5.516z"></path></svg>
+                   
+                        </div>
+                        <div class="profileText">Packages</div>
+                      </a>
+
+                
+                
+                </nav>
+
+                <div style="position: absolute;top: 90px;left: 0;width: 30%;">
+                    <div class="parentFlex contentCenter" >
+                       <div>
+                        <a id="imgLink" href="#profileImage" class="posRel">
+                            <img 
+                             src="../assets/images/personal_look.jpeg" alt="profile-image" style="
+                      
+                                max-width: 100%;
+                                height: auto;
+                                " width="260" height="260">
+                                <div class="clearfix"></div>
+                            <div class="statusCircle parentFlex flex1">
+                                <div class="contentCenter flex1 parentFlex">
+                                    <img class="" width="20" height="20"
+                                    src="../assets/images/1f4ad.png" alt="profile-image" />
+                                </div>
+                              
+                            </div>
+                                            </a>
+
+                                <div>
+                                    <h1 id="nameDir" class="parentFlex">
+                                        <span class="fullname">Alabi Temitope Wahab</span>
+                                        <span  class="usernameC">tbanj</span>
+                                       
+                            </h1>
+                            <div class="fz16 profileSubCrl" style="width: 280px;"
+                            >Software Engineer at Josla Electric Company Limited</div>
+                            
+                                </div>
+                       </div>
+                    </div>
+                    <div class="clearfix"></div>
+
+                </div>
+             </div>
+             
+          </div>
+
+          <!-- Search for repositories-->
+      </section>
+      <div class="clearfix"></div>
+
+
+      <section class="parentBody " style="min-height: 380px;">
+        <div style="flex: 1;" class="parentFlex pr-large-5 pl-large-5">
+            <div id="profileHeading" class="pl4 pr4 parentFlex">
+                <div class="flex2 " style="margin: 15px 25px; ">
+                    
+                  
+                </div>
+                <div class="flex5 " style="flex-direction: column; margin-top: 40px;">
+                    <!-- start contents for each tabs -->
+                    <div id="overview" class="tabcontent">
+                        
+                        <h3>London</h3>
+                        <p>London is the capital city of England.</p>
+                      </div>
+                      <div id="repositories" class="tabcontent">
+                        <form >
+                            <div class="row">
+                              <div  class="col-100 repoSearch">
+                                <input type="text" id="lname" name="lastname" placeholder="Find a repository..">
+                              </div>
+                            </div>
+                          </form>
+                          <div id="repoTextUnderline"></div>
+                         <div class="repoDesc">
+                            <p>124 results for <strong>public</strong> repositories</p>
+                         </div>
+                      
+                         <!-- repositories array list -->
+                       <div id="repoList">
+
+                       </div>
+                      </div>
+                      
+                      <div id="projects" class="tabcontent">
+                        <h3>Projects</h3>
+                        <p>Paris is the capital of France.</p> 
+                      </div>
+                      
+                      <div id="packages" class="tabcontent">
+                        <h3>Packages</h3>
+                        <p>Tokyo is the capital of Japan.</p>
+                      </div>
+                       <!-- end contents for each tabs -->
+                </div>
+                
+                      
+                </div>
+                </div>
+        
+      </section>
+      <div id="id01"></div>
+      <div id="id02"></div>
+      <!-- <script src="content.js"></script> -->
+    </body>
+
+<!-- scripts test for data load-->
+<!-- <script>
+    function testArr(arr) {
+        var out = "";
+        var i;
+        for(i = 0; i<arr.length; i++) {
+            out += '<a href="' + arr[i].url + '">' + arr[i].display + '</a><br>';
+        }
+        document.getElementById("id01").innerHTML = out;
+    }
+    </script> -->
+
+    <!-- getData(data); for github detail -->
+    
+    
+<script>
+    //  dynamically populate repository list
+    function getRepoList (data) {
+        console.log('github data', data);
+        // var dataList ="";
+        // var j;
+        // for(j =0; i<arr.length; j++){
+
+        // }
+    }
+
+    function getRepoData(arr) {
+    var updateData = "";
+    let  updatedMoment =''
+    // getDays('ade','dele');
+    console.log('github', arr.data.viewer.repositories.edges[1]);
+    var repoArr= arr.data.viewer.repositories.edges;
+    var dataList ="";
+        var j;
+        for(j =0; j<repoArr.length; j++){
+             updatedMoment = getDate(repoArr[j]['node']['updatedAt']);
+            console.log('updatedMoment', updatedMoment);
+                dataList += `
+                <div class="parentFlex bbgr mt4">
+    <div  class="parentFlex subRepoContainer">
+     <div class=" flex5" >
+         <h3 class="fzh3">
+             <a id="repoText" href="#IreAderinoku">${repoArr[j]['node']['name'] ||""}</a>
+             <span style='display: ${repoArr[j]['node']['isPrivate']? 'inline-block;': 'none;'}' class="repoType">${repoArr[j]['node']['isPrivate']? 'Private': ''}</span>
+         </h3>
+         <div class="mb8 col-75">
+             <p class="flex2 fcolor fz14">
+                 ${repoArr[j]['node']['description']  ? `${repoArr[j]['node']['description']}`  : ''}
+             </p>
+         </div>
+
+         <div class="parentFlex">
+             <div class="mr3 fz12 fcolor">
+                 <span style='display:  ${repoArr[j]['node']['primaryLanguage']  &&  `${repoArr[j]['node']['primaryLanguage']['color']}` ? 'inline-block' : 'none'}; background-color: ${repoArr[j]['node']['primaryLanguage']  &&  `${repoArr[j]['node']['primaryLanguage']['color']}` ? `${repoArr[j]['node']['primaryLanguage']['color']}`  : '#ffffff'};
+                 ' class="priLangCrl"></span>
+                 <span class="fz12 fcolor">${repoArr[j]['node']['primaryLanguage']  &&  `${repoArr[j]['node']['primaryLanguage']['name']}` ? `${repoArr[j]['node']['primaryLanguage']['name']}`  : ''}</span>
+                 Updated on
+                 <time datetime="2008-02-14 20:00" style="white-space: nowrap!important;"
+                 >${updatedMoment}</time>
+             </div>
+             <!-- <relative-time datetime="2020-10-28T09:32:10Z" class="no-wrap" title="28 Oct 2020, 10:32 GMT+1">20 days ago</relative-time>
+              -->
+             <div></div>
+             <div></div>
+         </div>
+      </div>
+
+      <div class="flex1">
+          <div class="fr ">
+              <form action="">
+                 <button class="btnStar btnStarView" >
+                     <div class="mt2">
+                         <svg class="octicon octicon-star mr4"
+                          viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25zm0 2.445L6.615 5.5a.75.75 0 01-.564.41l-3.097.45 2.24 2.184a.75.75 0 01.216.664l-.528 3.084 2.769-1.456a.75.75 0 01.698 0l2.77 1.456-.53-3.084a.75.75 0 01.216-.664l2.24-2.183-3.096-.45a.75.75 0 01-.564-.41L8 2.694v.001z"></path></svg>
+                     
+                     </div>
+                    Star
+                 </button>
+              </form>
+
+              <!-- graph -->
+             
+          </div>
+
+
+          <svg width="155" height="2">
+             <defs>
+               <linearGradient id="gradient-312443105" x1="0" x2="0" y1="1" y2="0">
+                   <stop offset="10%" stop-color="var(--color-calendar-graph-day-L1-bg)"></stop>
+                   <stop offset="33%" stop-color="var(--color-calendar-graph-day-L2-bg)"></stop>
+                   <stop offset="66%" stop-color="var(--color-calendar-graph-day-L3-bg)"></stop>
+                   <stop offset="90%" stop-color="var(--color-calendar-graph-day-L4-bg)"></stop>
+               </linearGradient>
+               <mask id="sparkline-312443105" x="0" y="0" width="155" height="28">
+                 <polyline transform="translate(0, 28) scale(1,-1)" points="0,1 3,1 6,1 9,1 12,1 15,1 18,1 21,1 24,1 27,1 30,1 33,1 36,1 39,1 42,1 45,1 48,1 51,1 54,1 57,1 60,1 63,1 66,1 69,1 72,1 75,1 78,1 81,1 84,1 87,1 90,1 93,1 96,1 99,1 102,1 105,1 108,1 111,1 114,1 117,1 120,1 123,1 126,1 129,1 132,1 135,1 138,1 141,1 144,1 147,1 150,1 153,2 " fill="transparent" stroke="#8cc665" stroke-width="2">
+               </polyline></mask>
+             </defs>
+       
+             <g transform="translate(0, -12)">
+               <rect x="0" y="-2" width="155" height="30" style="stroke: none; fill: #b8f0c1; mask: #b8f0c1"></rect>
+             </g>
+           </svg>
+      </div>
+    </div>
+  </div>`
+        }
+
+    document.getElementById("repoList").innerHTML = dataList;
+}
+
+    // set a default value for profile tab as repositories
+    document.getElementById('repositories').style.display = "block";
+    document.getElementById('defaultRepo').classList.add('activeSubMenu');
+    // start mobile navbar view 1
+    function openNav() {
+      document.getElementById("myNav").style.height = "100%";
+    }
+    
+    function closeNav() {
+      document.getElementById("myNav").style.height = "0%";
+    }
+// end mobile navbar view 1
+   
+    // start mobile navbar view 2
+    function getMobileMenu() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+//  end mobile navbar view 2
+
+
+// start for tab changing
+function getTab(evt, cityName) {
+    // console.log('evt', evt);
+    // evt.currentTarget.className += " activeSubMenu";
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" activeSubMenu", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " activeSubMenu";
+}
+// end for tab changing
+
+    </script>
+    <script src="../assets/js/data.js"></script>
+    <link href="./form.html" rel="import" />
+    <script src="../assets/js/testArr.js"></script>
+    <script src="../assets/js/dropdown.js"></script>
+    <script src="../assets/js/remoteData.js"></script>
+    <!-- <script src="../assets/js/profileDropdown.js"></script> -->
+</html>
