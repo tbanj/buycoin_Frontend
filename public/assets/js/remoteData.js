@@ -55,7 +55,7 @@ function getInfo() {
     method: 'POST',
     body: JSON.stringify(queryData),
     headers: {
-      'Authorization': `Bearer  GITHUB`,
+      'Authorization': `Bearer  EMPTY`,
       'Content-Type': 'Application/json'
     }
   }).then(res => {
