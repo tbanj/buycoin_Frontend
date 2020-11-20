@@ -17,6 +17,10 @@ body {
     margin-top: 24px;
 }
 
+ml4 {
+  margin-top: 24px;
+}
+
 #textData {
     justify-content: flex-start;
 }
@@ -39,7 +43,15 @@ body {
     }
 }
 
+@media (max-width: 1012px) {
+  div div#addMl {
+    margin-left: 3rem;
+  }
+}
+
 @media (min-width: 1012px) {
+ 
+
 .pr-large-5 {
     padding-right: 32px !important;
 }
@@ -76,11 +88,7 @@ body {
     flex: 8;
 }
 
-/* for profile Sub Menu start */
-#profileHeading {
-    flex: 1 !important;
-    /* flex-direction: row; */
-}
+
 
 
 a.parentFlex div.profileText{
@@ -91,6 +99,7 @@ a.parentFlex div.profileText{
   .repoCount {
     background-color: #d1d5da;
     border-radius: 2em;
+    padding: 4px;
   }
 
   nav a.parentFlex{
@@ -120,11 +129,6 @@ a.parentFlex div.profileText{
     padding-bottom: 5px;
   }
 
-  /* for profile Sub Menu start */
-  div#profileSubMenu {
-    flex: 1;
-    border-bottom: 2px solid#d1d5da;
-  }
 
   #searchRepoForm{
     border: 1px solid lightgrey !important;
@@ -139,11 +143,7 @@ a.parentFlex div.profileText{
     border-radius: .25rem;
   }
 
-  .tabcontent {
-    display: none;
-    padding: 6px 12px;
-    border-top: none;
-  }
+  
 
   
 
@@ -267,12 +267,6 @@ a.parentFlex div.profileText{
     border-bottom: 1px solid#d1d5da;
   }
 
-  .subRepoContainer{
-    flex: 1;
-    margin-bottom: 35px;
-    margin-right: 35px;
-
-  }
 
   .btnStar{padding: 3px 12px;
     font-size: 12px;
@@ -308,10 +302,7 @@ a.parentFlex div.profileText{
         cursor: pointer;
     }
   
-    div a#imgLink{
-        width: 260px;
-        height: 260px;
-    }
+    
 
     div a#imgLink img{
         border-radius: 50%!important;
@@ -323,17 +314,7 @@ a.parentFlex div.profileText{
         clear: both;
       }
 
-      div.statusCircle{
-        position: absolute;
-        bottom: 34px;
-        right: 0;
-        /* display: inline-block; */
-        width: 35px;
-        height: 35px;
-        border-radius: 50%;
-        background-color: #ffffff;
-        border: 1px solid#d1d5da;
-      }
+      
 
       .usernameC{
           color: #586069;
@@ -370,3 +351,174 @@ a.parentFlex div.profileText{
         flex-direction: column-reverse;
         height: 100%;
       }
+
+
+      /* for profile Sub Menu start */
+
+
+@media only screen and (min-width: 769px) {
+  /* div div#addMl {
+    margin-left: 3rem;
+  } */
+
+  #profileHeading {
+    flex: 1 !important;
+    display: flex;
+    /* flex-direction: row; */
+  }
+  div nav.ml30{
+    margin-left: 30px !important;
+  }
+
+  div nav a.ml30{ 
+    margin-left: 0px !important;
+  }
+
+  .tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border-top: none;
+  }
+
+  .subRepoContainer{
+    flex: 1;
+    margin-bottom: 35px;
+    margin-right: 35px;
+    justify-content: space-around;
+  }
+
+  body section.parentBody.mt4{
+    flex: 1;
+    display: flex;
+}
+section div#profileSubMenu{
+    flex: 1;
+    border-bottom: 2px solid#d1d5da;
+    display: flex;
+}
+div#repositories form {
+  margin: 6px 12px 6px 0px;
+}
+.stateDispMobile{display: none;}
+
+div.statusCircle{
+  position: absolute;
+  bottom: 34px;
+  right: 0;
+  /* display: inline-block; */
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 1px solid#d1d5da;
+}
+
+div a#imgLink{
+  width: 260px;
+  height: 260px;
+}
+}
+
+@media only screen and (max-width: 768px) {
+  #profileHeading {
+    flex: 1 !important;
+    /* display: flex; */
+    /* flex-direction: row; */
+  }
+  div nav.ml30{
+    margin-left: 0px !important;
+  }
+  div nav a.ml30{ 
+    margin-left: 0px !important;
+  }
+
+  .tabcontent {
+    display: none;
+    /* padding: 6px 12px; */
+    border-top: none;
+  }
+
+
+  .subRepoContainer{
+    flex: 1;
+    margin-bottom: 35px;
+    margin-right: 10px;
+    margin-left: 10px;
+    justify-content: space-around;
+
+  }
+  body section.parentBody.mt4{
+      flex: 1;
+  }
+
+  section div#profileSubMenu{
+    overflow-x: auto;
+      overflow-y: hidden;
+      flex: 1;
+      border-bottom: 2px solid#d1d5da;
+      display: flex;
+  }
+  div.repoDesc p{
+    margin-left: 10px;
+  }
+
+  div#repositories form {
+    margin: 0px;
+  }
+  form div div.col-100.repoSearch {
+    float: left;
+    width: 90%;
+    margin-top: 6px;
+    margin-left: 10px;
+  }
+  .stateDispMobile{display: block;}
+
+  section .stateDispMobile div a {
+    width: 16.66667%;
+  }
+
+  section.stateDispMobile div.mobileContent{
+    flex-direction: row;
+    display: flex;
+  }
+
+
+    section div#workStatus{
+      border: 1px solid#d1d5da;
+      border-radius: 6px;
+    }
+
+    section div#workStatus div.statusDesc{
+      margin: 6px;
+
+    }
+
+    div a#imgLink{
+      width: 16.66667%;
+  }
+  
+
+  .usernameC{
+    color: #586069;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+
+section div#workStatus{
+  border: 1px solid#d1d5da;
+  border-radius: 6px;
+  flex-direction: row;
+  display: flex;
+}
+section.stateDispMobile div div.ml16.parentBody.contentCenter{
+  max-width: 400px; 
+}
+
+  }
+
+  @media screen and (max-width: 450px) { 
+    section.stateDispMobile div div.ml16.parentBody.contentCenter{
+      max-width: 200px; 
+    }
+  }
