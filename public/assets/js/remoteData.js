@@ -55,7 +55,7 @@ function getInfo() {
     method: 'POST',
     body: JSON.stringify(queryData),
     headers: {
-      'Authorization': `Bearer  ${GITHUB_TOKEN}`,
+      'Authorization': `Bearer  98bccd9b78adc14d3dc77adecaa53b07570a7425`,
       'Content-Type': 'Application/json'
     }
   }).then(res => {
@@ -97,7 +97,7 @@ function getRepoList(arr) {
     dataList += `
             <div class="parentFlex bbgr mt4">
 <div  class="parentFlex subRepoContainer">
- <div class=" flex5" >
+ <div class="" style="flex-grow: inherit;">
      <h3 class="fzh3">
          <a id="repoText" href='${repoArr[j]['node']['url']}'>${repoArr[j]['node']['name'] || ""}</a>
          <span style='display: ${repoArr[j]['node']['isPrivate'] ? 'inline-block;' : 'none;'}' class="repoType">${repoArr[j]['node']['isPrivate'] ? 'Private' : ''}</span>
@@ -139,7 +139,7 @@ function getRepoList(arr) {
      </div>
   </div>
 
-  <div class="flex1">
+  <div class=>
       <div class="fr ">
           <form class="fr">
              <button class="btnStar btnStarView" >
@@ -182,16 +182,31 @@ function getRepoList(arr) {
   }
 
   document.getElementById("repoList").innerHTML = dataList;
-  document.getElementById("profileName").innerHTML = profileName;
+  const profileNameText = document.getElementsByClassName("profileName");
+
   const usernameArr = document.getElementsByClassName("profileUsername");
-  document.getElementById("profileBio").innerHTML = profileBio;
+  const profileBioText = document.getElementsByClassName("profileBio");
+
   document.getElementById("repoPubCount").innerHTML = repoPubCount;
-  document.getElementById("profileImg").src = profileImg;
+
+  const profileImgSrc = document.getElementsByClassName("profileImg");
   document.getElementById("profileAvatar").src = profileAvatar;
 
   // loop through profileUsername class
   for (let un = 0; un < usernameArr.length; un++) {
     usernameArr[un].innerHTML = profileUsername;
+  }
+
+  for (let pb = 0; pb < profileBioText.length; pb++) {
+    profileBioText[pb].innerHTML = profileBio;
+  }
+
+  for (let pn = 0; pn < profileNameText.length; pn++) {
+    profileNameText[pn].innerHTML = profileName;
+  }
+
+  for (let pis = 0; pis < profileImgSrc.length; pis++) {
+    profileImgSrc[pis].src = profileImg;
   }
 
 }

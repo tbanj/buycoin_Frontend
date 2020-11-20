@@ -21,7 +21,8 @@
         <div class="topnav">
           <!-- <a href="#home" class="active">Logo</a> -->
           
-          <div class="parentFlex">
+          <div class="parentFlex" style="display: flex;
+          flex: 1; ">
             <div id="iconMenuMobile">
                 <span style="font-size:30px;cursor:pointer" onclick="getMobileMenu()">&#9776; </span>
             </div>
@@ -160,11 +161,48 @@
       </nav>
 
       <!-- Sub Menu of the user profile -->
+      <!-- start mobile view of  profile image and description -->
+      <section class="stateDispMobile mt10" >
+        <div class="mobileContent">
+                                <a id="imgLink" href="#profileImage" class="parentBody contentCenter">
+                                    <img class="profileImg" src="assets/images/1f4ad.png" alt="profile-image" style="
+                              
+                                        max-width: 100%;
+                                        height: auto;
+                                        " width="260" height="260">
+                                        <!-- <div class="clearfix"></div> -->
+                                   
+                                                    </a>
+        
+                                        <div class="ml16 parentBody contentCenter" >
+                                            <h1 id="nameDir" class="parentFlex">
+                                                <span class="fullname profileName">Alabi Temitope Wahab</span>
+                                                <span class="usernameC profileUsername">tbanj</span>
+                                               
+                                    </h1>
+                                    
+                                        </div>
+                               </div>
+                               <div id="workStatus" class="ml10 mr10 mt4" >
+                                <div class="statusDesc">
+                                  <img class="" width="20" height="20" src="assets/images/1f4ad.png" alt="profile-image">
+                                 
+                                </div>
+                                <div class="fz12 statusDesc"> Available for remote work or onsite  </div>
+                               </div>
+                               <div class="ml10 mr10 mt10 ">
+                                <div class="fz16 profileSubCrl profileBio" >Software Engineer at Josla Electric Company Limited</div>
+                                    
+                               </div>
+        </section>
+      <!-- end mobile view of profile image and description -->
+
+
       <section class="parentBody mt4">
           <!-- <div>gghh</div> -->
-          <div id="profileSubMenu"class="parentFlex pr-large-5 pl-large-5">
+          <div id="profileSubMenu"class=" pr-large-5 pl-large-5">
              <div id="profileHeading" class="pl4 pr4 parentFlex">
-                <div class="flex2  posRel"></div>
+                <div class="flex2  posRel stateDispB"></div>
                 <nav class="flex5 parentFlex ml30">
                    <a   onclick="getTab(event, 'overview')" href="#overview" class="parentFlex tablinks ml30" style="cursor: pointer;">
                        <div class="psm5 padicon">
@@ -206,11 +244,11 @@
                 </nav>
 
                 <div style="position: absolute;top: 90px;left: 0;width: 30%;">
-                    <div class="parentFlex contentCenter" >
-                       <div>
+                    <div class="parentFlex contentCenter stateDisp" >
+                       <div id="addMl">
                         <a id="imgLink" href="#profileImage" class="posRel">
-                            <img id="profileImg"
-                             src="assets/images/personal_look.jpeg" alt="profile-image" style="
+                            <img class="profileImg"
+                             src="assets/images/1f4ad.png" alt="profile-image" style="
                       
                                 max-width: 100%;
                                 height: auto;
@@ -227,12 +265,12 @@
 
                                 <div>
                                     <h1 id="nameDir" class="parentFlex">
-                                        <span id="profileName" class="fullname"></span>
-                                        <span   class="usernameC profileUsername"></span>
+                                        <span  class="fullname profileName">Alabi Temitope Wahab</span>
+                                        <span   class="usernameC profileUsername">tbanj</span>
                                        
                             </h1>
-                            <div id="profileBio" class="fz16 profileSubCrl" style="width: 280px;"
-                            ></div>
+                            <div  class="fz16 profileSubCrl profileBio" style="width: 280px;"
+                            >Software Engineer at Josla Electric Company Limited</div>
                             
                                 </div>
                        </div>
@@ -252,7 +290,7 @@
       <section class="parentBody " style="min-height: 380px;">
         <div style="flex: 1;" class="parentFlex pr-large-5 pl-large-5">
             <div id="profileHeading" class="pl4 pr4 parentFlex">
-                <div class="flex2 " style="margin: 15px 25px; ">
+                <div class="flex2 stateDispB" style="margin: 15px 25px; ">
                     
                   
                 </div>
