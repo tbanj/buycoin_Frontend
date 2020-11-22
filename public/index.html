@@ -8,9 +8,6 @@
     <link rel='stylesheet' type='text/css' media='screen' href='assets/css/index.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='assets/css/navbar.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='assets/css/dropdown.css'>
-    
-    <!-- <script src='main.js'></script> -->
-    
 </head>
 <body>
     
@@ -19,8 +16,6 @@
 
         <!-- Top Navigation Menu -->
         <div class="topnav">
-          <!-- <a href="#home" class="active">Logo</a> -->
-          
           <div class="parentFlex" style="display: flex;
           flex: 1; ">
             <div id="iconMenuMobile">
@@ -130,8 +125,11 @@
 
               <!-- about user and setting -->
               <li id="profileIcon"><div class="dropdown">
-                <div class="profiledropbtn posRel" onclick="getProfile()">
-                    <img id="profileAvatar" class="profiledropbtn profiledb"  width="20" height="20" src="assets/images/personal_look.jpeg" alt="bell icon"/>
+                <div class="contentCenter parentFlex imgLoader p10">
+                  <div class="loader"></div>
+                </div>
+                <div style="display: none;" class="profiledropbtn posRel ImgState" onclick="getProfile()">
+                    <img id="profileAvatar" class="profiledropbtn profiledb profileImg"  width="20" height="20" src="assets/images/personal_look.jpeg" alt="bell icon"/>
                     <span id="drop-icon">&#9663</span>
                 </div>
                 <div id="profileDropdown" class="profile-dropdown-content">
@@ -164,36 +162,40 @@
       <!-- start mobile view of  profile image and description -->
       <section class="stateDispMobile mt10" >
         <div class="mobileContent">
-                                <a id="imgLink" href="#profileImage" class="parentBody contentCenter">
-                                    <img class="profileImg" src="assets/images/1f4ad.png" alt="profile-image" style="
-                              
-                                        max-width: 100%;
-                                        height: auto;
-                                        " width="260" height="260">
-                                        <!-- <div class="clearfix"></div> -->
-                                   
-                                                    </a>
-        
-                                        <div class="ml16 parentBody contentCenter" >
-                                            <h1 id="nameDir" class="parentFlex">
-                                                <span class="fullname profileName">Alabi Temitope Wahab</span>
-                                                <span class="usernameC profileUsername">tbanj</span>
-                                               
-                                    </h1>
-                                    
-                                        </div>
-                               </div>
-                               <div id="workStatus" class="ml10 mr10 mt4" >
-                                <div class="statusDesc">
-                                  <img class="" width="20" height="20" src="assets/images/1f4ad.png" alt="profile-image">
-                                 
-                                </div>
-                                <div class="fz12 statusDesc"> Available for remote work or onsite  </div>
-                               </div>
-                               <div class="ml10 mr10 mt10 ">
-                                <div class="fz16 profileSubCrl profileBio" >Software Engineer at Josla Electric Company Limited</div>
-                                    
-                               </div>
+          <!-- loader -->
+                <div class="contentCenter parentFlex imgLoader">
+                  <div class="loader"></div>
+                </div>
+                 <a style="display: none;" id="imgLink" href="#profileImage" class="parentBody contentCenter ImgState">
+                     <img class="profileImg" src="assets/images/1f4ad.png" alt="profile-image" style="
+               
+                         max-width: 100%;
+                         height: auto;
+                         " width="260" height="260">
+                         <!-- <div class="clearfix"></div> -->
+                    
+                                     </a>
+      
+                         <div class="ml16 parentBody contentCenter" >
+                             <h1 id="nameDir" class="parentFlex">
+                                 <span class="fullname profileName">Alabi Temitope Wahab</span>
+                                 <span class="usernameC profileUsername">tbanj</span>
+                                
+                     </h1>
+                     
+                         </div>
+                </div>
+                <div id="workStatus" class="ml10 mr10 mt4" >
+                 <div class="statusDesc">
+                   <img class="" width="20" height="20" src="assets/images/1f4ad.png" alt="profile-image">
+                  
+                 </div>
+                 <div class="fz12 statusDesc"> Available for remote work or onsite  </div>
+                </div>
+                <div class="ml10 mr10 mt10 ">
+                 <div class="fz16 profileSubCrl profileBio" >Software Engineer at Josla Electric Company Limited</div>
+                     
+                </div>
         </section>
       <!-- end mobile view of profile image and description -->
 
@@ -246,21 +248,26 @@
                 <div style="position: absolute;top: 90px;left: 0;width: 30%;">
                     <div class="parentFlex contentCenter stateDisp" >
                        <div id="addMl">
-                        <a id="imgLink" href="#profileImage" class="posRel">
+                         <div class="contentCenter parentFlex imgLoader">
+                           <div class="loader"></div>
+                         </div>
+                        <a style="display: none;" id="imgLink" href="#profileImage" class="posRel ImgState">
                             <img class="profileImg"
                              src="assets/images/1f4ad.png" alt="profile-image" style="
-                      
+                              
                                 max-width: 100%;
                                 height: auto;
                                 " width="260" height="260">
                                 <!-- <div class="clearfix"></div> -->
-                            <div class="statusCircle parentFlex flex1">
+                            <div style="display: none;" id="stsCircle" class="statusCircle parentFlex flex1">
                                 <div class="contentCenter flex1 parentFlex">
                                     <img class="" width="20" height="20"
                                     src="assets/images/1f4ad.png" alt="profile-image" />
                                 </div>
                               
                             </div>
+                            
+                            
                                             </a>
 
                                 <div>
@@ -315,8 +322,10 @@
                          </div>
                       
                          <!-- repositories array list -->
-                       <div id="repoList">
-
+                       <div  id="repoList" class="repoMobile">
+                            <div id="repoLoader" class="contentCenter parentFlex">
+                              <div class="loader"></div>
+                            </div>
                        </div>
                       </div>
                       

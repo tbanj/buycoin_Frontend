@@ -55,7 +55,7 @@ function getInfo() {
     method: 'POST',
     body: JSON.stringify(queryData),
     headers: {
-      'Authorization': `Bearer  EMPTY`,
+      'Authorization': `Bearer  key`,
       'Content-Type': 'Application/json'
     }
   }).then(res => {
@@ -182,6 +182,8 @@ function getRepoList(arr) {
   }
 
   document.getElementById("repoList").innerHTML = dataList;
+
+
   const profileNameText = document.getElementsByClassName("profileName");
 
   const usernameArr = document.getElementsByClassName("profileUsername");
@@ -189,8 +191,11 @@ function getRepoList(arr) {
 
   document.getElementById("repoPubCount").innerHTML = repoPubCount;
 
+  const profileImgLoader = document.getElementsByClassName("imgLoader");
   const profileImgSrc = document.getElementsByClassName("profileImg");
-  document.getElementById("profileAvatar").src = profileAvatar;
+  const profileImgState = document.getElementsByClassName("ImgState");
+
+  // document.getElementById("profileAvatar").src = profileAvatar;
 
   // loop through profileUsername class
   for (let un = 0; un < usernameArr.length; un++) {
@@ -205,8 +210,14 @@ function getRepoList(arr) {
     profileNameText[pn].innerHTML = profileName;
   }
 
+  for (let pisl = 0; pisl < profileImgLoader.length; pisl++) {
+    profileImgLoader[pisl].style.display = "none";
+    profileImgState[pisl].style.display = "block";
+  }
   for (let pis = 0; pis < profileImgSrc.length; pis++) {
     profileImgSrc[pis].src = profileImg;
   }
 
+  document.getElementById("stsCircle").style.display = "flex";
+  document.getElementById("repoLoader").style.display = "none";
 }
