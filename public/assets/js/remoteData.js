@@ -1,5 +1,43 @@
 
-function getInfo() {
+function getRepoCount() {
+  let url = 'https://api.github.com/graphql';
+  let queryData = {
+    query: `
+    {
+      viewer {
+        login
+       repositories(isFork: false) {
+          totalCount
+        }
+      }
+    }   
+          `
+  }
+  fetch(url, {
+    method: 'POST',
+    body: JSON.stringify(queryData),
+    headers: {
+      'Authorization': `Bearer  key`,
+      'Content-Type': 'Application/json'
+    }
+  }).then(res => {
+
+    if (res.status === 400) { return res.json(); }
+    if (res.ok) {
+      return res.json();
+    } else { throw new Error('network error'); }
+  })
+    .then(async (parsedRes) => {
+      console.log('parsedRes ff', parsedRes);
+      const data = await parsedRes;
+      getInfo(data);
+    })
+}
+
+getRepoCount();
+
+// get repositories datas with profile avatar
+function getInfo(repoCount) {
   let url = 'https://api.github.com/graphql';
   let queryData = {
     query: `
@@ -66,21 +104,24 @@ function getInfo() {
     } else { throw new Error('network error'); }
   })
     .then(async (parsedRes) => {
-      getRepoList(parsedRes);
+      // const repo = await getRepoCount();
+
+      getRepoList(parsedRes, repoCount);
     })
 }
 
-getInfo();
+// getInfo();
 
 
 
-function getRepoList(arr) {
+function getRepoList(arr, count) {
   let updateData = "";
   let updatedMoment = "";
   let profileName = "";
   let profileUsername = "";
   let profileBio = "";
   let repoPubCount = "";
+  let repoTotalCount = "";
   let profileImg = "";
   profileImg = arr.data.user.avatarUrl;
   profileAvatar = arr.data.user.avatarUrl;
@@ -89,6 +130,7 @@ function getRepoList(arr) {
   profileName = arr.data.viewer.name;
   profileUsername = arr.data.viewer.login;
   repoPubCount = arr.data.viewer.repositories.totalCount;
+  repoTotalCount = count.data.viewer.repositories.totalCount;
   var repoArr = arr.data.viewer.repositories.edges;
   var dataList = "";
   var j;
@@ -183,6 +225,7 @@ function getRepoList(arr) {
 
   document.getElementById("repoList").innerHTML = dataList;
 
+  document.getElementById("repoTotalCount").innerHTML = repoTotalCount;
 
   const profileNameText = document.getElementsByClassName("profileName");
 
@@ -190,11 +233,12 @@ function getRepoList(arr) {
   const profileBioText = document.getElementsByClassName("profileBio");
 
   document.getElementById("repoPubCount").innerHTML = repoPubCount;
+  // const totalRepoCount = document.getElementsByClassName("repoPubCount");
 
   const profileImgLoader = document.getElementsByClassName("imgLoader");
   const profileImgSrc = document.getElementsByClassName("profileImg");
   const profileImgState = document.getElementsByClassName("ImgState");
-
+  // document.getElementById("repoLoader").style.display = "none";
   // document.getElementById("profileAvatar").src = profileAvatar;
 
   // loop through profileUsername class
@@ -210,6 +254,10 @@ function getRepoList(arr) {
     profileNameText[pn].innerHTML = profileName;
   }
 
+  // for (let trc = 0; trc < totalRepoCount.length; trc++) {
+  //   totalRepoCount[trc].innerHTML = repoPubCount;
+  // }
+
   for (let pisl = 0; pisl < profileImgLoader.length; pisl++) {
     profileImgLoader[pisl].style.display = "none";
     profileImgState[pisl].style.display = "block";
@@ -219,5 +267,8 @@ function getRepoList(arr) {
   }
 
   document.getElementById("stsCircle").style.display = "flex";
-  document.getElementById("repoLoader").style.display = "none";
+
+
+
+
 }
