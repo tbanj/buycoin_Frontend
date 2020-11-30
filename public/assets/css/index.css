@@ -130,6 +130,13 @@ ml4 {
 a.parentFlex div.profileText{
     font-size: 14px;
     padding-bottom: 10px;
+    /* color: #000000; */
+    color: #31363b;
+  }
+
+  a.parentFlex.activeSubMenu div.profileText {
+    color: #000000; 
+    font-weight: 600;
   }
 
   .repoCount {
@@ -559,7 +566,7 @@ section.stateDispMobile div div.ml16.parentBody.contentCenter{
     }
 
     div#repoList.repoMobile {
-      white-space: nowrap;
+      /* white-space: nowrap; */
     position: relative;
     overflow-x: scroll;
     overflow-y: hidden;

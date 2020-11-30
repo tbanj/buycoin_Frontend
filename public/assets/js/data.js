@@ -1,3 +1,4 @@
+
 document.getElementById('repositories').style.display = "block";
 document.getElementById('defaultRepo').classList.add('activeSubMenu');
 // start mobile navbar view 1
@@ -20,9 +21,16 @@ function getMobileMenu() {
     }
 }
 
+// When the user clicks on the button, scroll to the top of the document
+function scrollUp() {
+    window.scrollTo(0, 0);
+    // document.body.scrollTop = 0;
+    // document.documentElement.scrollTop = 0;
+}
+
 
 // start for tab switching
-function getTab(evt, cityName) {
+function getTab(evt, repoSelected) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
@@ -32,8 +40,9 @@ function getTab(evt, cityName) {
     for (i = 0; i < tablinks.length; i++) {
         tablinks[i].className = tablinks[i].className.replace(" activeSubMenu", "");
     }
-    document.getElementById(cityName).style.display = "block";
+    document.getElementById(repoSelected).style.display = "block";
     evt.currentTarget.className += " activeSubMenu";
+
 }
 
 function getDate(data) {
