@@ -17,7 +17,7 @@ function getRepoCount() {
     method: 'POST',
     body: JSON.stringify(queryData),
     headers: {
-      'Authorization': `Bearer  key`,
+      'Authorization': `Bearer  er`,
       'Content-Type': 'Application/json'
     }
   }).then(res => {
@@ -87,13 +87,13 @@ function getInfo(repoCount) {
         avatarUrl(size: 280)
       }
     }       
-          `
+      `
   }
   fetch(url, {
     method: 'POST',
     body: JSON.stringify(queryData),
     headers: {
-      'Authorization': `Bearer  key`,
+      'Authorization': `Bearer  er`,
       'Content-Type': 'Application/json'
     }
   }).then(res => {
@@ -104,8 +104,6 @@ function getInfo(repoCount) {
     } else { throw new Error('network error'); }
   })
     .then(async (parsedRes) => {
-      // const repo = await getRepoCount();
-
       getRepoList(parsedRes, repoCount);
     })
 }
@@ -223,7 +221,11 @@ function getRepoList(arr, count) {
 </div>`
   }
 
+
   document.getElementById("repoList").innerHTML = dataList;
+  console.log('after list display', window.scrollY);
+
+
 
   document.getElementById("repoTotalCount").innerHTML = repoTotalCount;
 
@@ -233,14 +235,9 @@ function getRepoList(arr, count) {
   const profileBioText = document.getElementsByClassName("profileBio");
 
   document.getElementById("repoPubCount").innerHTML = repoPubCount;
-  // const totalRepoCount = document.getElementsByClassName("repoPubCount");
-
   const profileImgLoader = document.getElementsByClassName("imgLoader");
   const profileImgSrc = document.getElementsByClassName("profileImg");
   const profileImgState = document.getElementsByClassName("ImgState");
-  // document.getElementById("repoLoader").style.display = "none";
-  // document.getElementById("profileAvatar").src = profileAvatar;
-
   // loop through profileUsername class
   for (let un = 0; un < usernameArr.length; un++) {
     usernameArr[un].innerHTML = profileUsername;
@@ -253,11 +250,6 @@ function getRepoList(arr, count) {
   for (let pn = 0; pn < profileNameText.length; pn++) {
     profileNameText[pn].innerHTML = profileName;
   }
-
-  // for (let trc = 0; trc < totalRepoCount.length; trc++) {
-  //   totalRepoCount[trc].innerHTML = repoPubCount;
-  // }
-
   for (let pisl = 0; pisl < profileImgLoader.length; pisl++) {
     profileImgLoader[pisl].style.display = "none";
     profileImgState[pisl].style.display = "block";

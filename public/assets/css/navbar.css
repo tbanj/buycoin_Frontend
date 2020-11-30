@@ -12,6 +12,16 @@
     /* display: inline-flex; */
    
   /* } */
+
+  #iconBellNotify {
+    position: absolute;
+    background-color: #0366d6;
+    right: 3px;
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+  }
   
   .navigation {
     display: inline-flex;
@@ -195,7 +205,7 @@
     position: absolute;
     z-index: 2;
     display: block;
-    width: 4.375rem;
+    width: 20%;
     height: 2.375rem;
     line-height: 3.0rem;
     text-align: center;
@@ -341,6 +351,15 @@
         .brand {
           display: none;
         }
+         #mobileIconBellNotify{
+          position: absolute;
+          background-color: #0366d6;
+          right: 3px;
+          display: inline-block;
+          width: 14px;
+          height: 14px;
+          border-radius: 50%;
+         }
         #brandnav { display: none;}
         .stateDisp{display: none;}
         .stateDispB{display: none;}
@@ -380,7 +399,7 @@
             position: absolute;
             z-index: 2;
             display: block;
-            width: 4.375rem;
+            width: 20%;
             height: 2.375rem;
             line-height: 3.0rem;
             text-align: center;

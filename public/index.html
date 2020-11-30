@@ -26,8 +26,9 @@
                 <img src="assets/github_3.png" alt="mobile-logo" width="30" height="30">
             </div>
             <div style="flex: 1;" class="fz65">
-                <div class="fr">
+                <div class="fr posRel">
                     <img src="assets/images/notification.svg" alt="mobile-logo" width="30" height="30">
+                    <span id="mobileIconBellNotify"></span>
                 </div>
             </div>
 
@@ -103,8 +104,14 @@
         </div>
         <div class="navigation">
           <ul class="menu">
-            <li id="bellicon"><a href="#"><span ><img height="20" src="assets/images/notification.svg" alt="bell icon"/>
-            </span></a></li>
+            <li id="bellicon">
+              <a href="#">
+                <div style="display: inline-flex; position: relative;" >
+                  <img height="20" src="assets/images/notification.svg" alt="bell icon"/>
+                  <span id="iconBellNotify"></span>
+                </div>
+            </a>
+          </li>
             <li id="plusIcon"><div class="dropdown">
                 <div id="activateDropdown" class="dropbtn posRel" >
                     <img class="dropbtn"  height="15" src="assets/images/plus.svg" alt="bell icon"/>
@@ -312,7 +319,7 @@
                         <form >
                             <div class="row">
                               <div  class="col-100 repoSearch">
-                                <input type="text" id="lname" name="lastname" placeholder="Find a repository..">
+                                <input type="text" id="searchRepo" name="searchRepo" placeholder="Find a repository..">
                               </div>
                             </div>
                           </form>
