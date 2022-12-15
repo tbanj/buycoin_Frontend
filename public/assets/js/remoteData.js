@@ -17,7 +17,7 @@ function getRepoCount() {
     method: 'POST',
     body: JSON.stringify(queryData),
     headers: {
-      'Authorization': `Bearer  ghp`,
+      'Authorization': `Bearer  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`,
       'Content-Type': 'Application/json'
     }
   }).then(res => {
@@ -96,7 +96,7 @@ function getInfo(repoCount) {
     method: 'POST',
     body: JSON.stringify(queryData),
     headers: {
-      'Authorization': `Bearer  ghp`,
+      'Authorization': `Bearer  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`,
       'Content-Type': 'Application/json'
     }
   }).then(res => {
