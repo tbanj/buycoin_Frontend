@@ -17,7 +17,7 @@ function getRepoCount() {
     method: 'POST',
     body: JSON.stringify(queryData),
     headers: {
-      'Authorization': `Bearer  gmi`,
+      'Authorization': `Bearer grm`,
       'Content-Type': 'Application/json'
     }
   }).then(res => {
@@ -96,7 +96,7 @@ function getInfo(repoCount) {
     method: 'POST',
     body: JSON.stringify(queryData),
     headers: {
-      'Authorization': `Bearer  gmi`,
+      'Authorization': `Bearer grm`,
       'Content-Type': 'Application/json'
     }
   }).then(res => {
@@ -124,6 +124,7 @@ function getRepoList(arr, count) {
   let repoPubCount = "";
   let repoTotalCount = "";
   let profileImg ="";
+  let profileAvatar ="";
   profileImg = arr.data.user.avatarUrl;
   profileAvatar = arr.data.user.avatarUrl;
 
